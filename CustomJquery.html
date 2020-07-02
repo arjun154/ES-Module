@@ -10,7 +10,13 @@
         <div>Div 4</div>
         <div>Div 5</div>
     </body>
+    <script type="module" src="CustomJquery.js">
+    </script>
     <script type="module">
+        import $ from "./CustomJquery.js"
 
+        $('div').each(function(){
+            console.log(this)
+        })
     </script>
 </html>
