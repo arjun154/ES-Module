@@ -6,7 +6,7 @@
     <body>
         <div>Div 1</div>
         <div>Div 2</div>
-        <div>Div 3</div>
+        <div style="display: none;">Div 3</div>
         <div>Div 4</div>
         <div>Div 5</div>
     </body>
@@ -15,8 +15,11 @@
     <script type="module">
         import $ from "./CustomJquery.js"
 
-        $('div').each(function(){
+        $('div').each(function(ele){
             console.log(this)
+            console.log(ele.textContent)
+        }).each(function(item){
+            console.log(item.textContent)
         })
     </script>
 </html>
